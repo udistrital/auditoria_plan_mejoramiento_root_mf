@@ -1,4 +1,4 @@
-<single-spa-router>
+<single-spa-router base="/" disableWarnings>
   <!--
 
     This is the single-spa Layout Definition for your microfrontends.
@@ -25,15 +25,14 @@
   </main>-->
 
   <main id ="container">
-  <route path="roles">
-    <application name="@udistrital/sisifo-historico-roles-mf"></application>
-  </route>
-  <route path="plan-auditorias">
-    <application name="@udistrital/plan-anual-auditoria-mf"></application>
-  </route>
-
-  
+    <route path="roles">
+      <application name="@udistrital/sisifo-historico-roles-mf"></application>
+    </route>
+    <route path="plan-auditorias">
+      <application name="@udistrital/plan-anual-auditoria-mf"></application>
+    </route>
   </main>
+
   <div id="core">
     <application name="@udistrital/core-mf" props="environment"></application>
   </div>
