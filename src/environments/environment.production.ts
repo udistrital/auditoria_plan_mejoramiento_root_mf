@@ -9,10 +9,10 @@ export const environment = {
   TOKEN: {
     AUTORIZATION_URL:
       "https://autenticacion.portaloas.udistrital.edu.co/oauth2/authorize",
-    CLIENTE_ID: "2KK6pV4LPkc93Z2ZHwxXCcA2yD4a",
+    CLIENTE_ID: "xAk4mThTynSiAxYtHrPJKEB6OQ0a",
     RESPONSE_TYPE: "id_token token",
     SCOPE: "openid email role documento",
-    REDIRECT_URL: "https://sisifomicroclientes.portaloas.udistrital.edu.co",
+    REDIRECT_URL: "https://sisifoci.portaloas.udistrital.edu.co",
     SIGN_OUT_URL:
       "https://autenticacion.portaloas.udistrital.edu.co/oidc/logout",
     SIGN_OUT_REDIRECT_URL:
