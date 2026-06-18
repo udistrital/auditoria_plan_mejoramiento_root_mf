@@ -13,6 +13,7 @@ let environment;
 declare var isProd: boolean | undefined;
 declare var isDev: boolean | undefined;
 declare var isLocal: boolean | undefined;
+declare var System: any;
 
 if (isProd) {
   environment = require("./environments/environment.production");
