@@ -8,7 +8,8 @@ ellos y contiene el consumo de los assets, paleta de colores y favicon del siste
 
 ### Tecnologías Implementadas y Versiones
 * [Angular](https://angular.io/) 18.2.13
-* [Node](https://nodejs.org/es/) 18.19.0
+* [Node](https://nodejs.org/es/) 24.x
+* [pnpm](https://pnpm.io/es) 11.x
 
 
 ### Variables de Entorno
@@ -47,12 +48,12 @@ export const environment = {
    ```
 4. Instalar las dependencias:
    ```bash
-   npm install
+   pnpm install
    ```
 
 5. Iniciar el Root:
    ```bash
-   npm start
+   pnpm run start
    ```
 
 ### Ejecución Dockerfile
@@ -73,9 +74,9 @@ Pruebas unitarias
 ```
 ## Estado CI
 
-| Develop | Relese | Main |
+| Develop | Relese | Master |
 | -- | -- | -- |
-| [![Build Status](https://hubci.portaloas.udistrital.edu.co/api/badges/udistrital/auditoria_plan_mejoramiento_root_mf/status.svg?ref=refs/heads/develop)](https://hubci.portaloas.udistrital.edu.co/udistrital/auditoria_plan_mejoramiento_root_mf/) | [![Build Status](https://hubci.portaloas.udistrital.edu.co/api/badges/udistrital/auditoria_plan_mejoramiento_root_mf/status.svg?ref=refs/heads/release/0.0.1)](https://hubci.portaloas.udistrital.edu.co/udistrital/auditoria_plan_mejoramiento_root_mf/) | [![Build Status](https://hubci.portaloas.udistrital.edu.co/api/badges/udistrital/auditoria_plan_mejoramiento_root_mf/status.svg)](https://hubci.portaloas.udistrital.edu.co/udistrital/auditoria_plan_mejoramiento_root_mf/) |
+| [![Build Status](https://hubci.portaloas.udistrital.edu.co/api/badges/udistrital/auditoria_plan_mejoramiento_root_mf/status.svg?ref=refs/heads/develop)](https://hubci.portaloas.udistrital.edu.co/udistrital/auditoria_plan_mejoramiento_root_mf/) | [![Build Status](https://hubci.portaloas.udistrital.edu.co/api/badges/udistrital/auditoria_plan_mejoramiento_root_mf/status.svg?ref=refs/heads/release/1.0.0)](https://hubci.portaloas.udistrital.edu.co/udistrital/auditoria_plan_mejoramiento_root_mf/) | [![Build Status](https://hubci.portaloas.udistrital.edu.co/api/badges/udistrital/auditoria_plan_mejoramiento_root_mf/status.svg?ref=refs/heads/master)](https://hubci.portaloas.udistrital.edu.co/udistrital/auditoria_plan_mejoramiento_root_mf/) |
 
 ## Licencia
 
