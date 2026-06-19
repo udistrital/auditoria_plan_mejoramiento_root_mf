@@ -75,11 +75,11 @@ steps:
 #     - push
 
 - name: nodejs_release
-  image: node:20.14-alpine
+  image: node:24-alpine
   commands:
-  - node --version
-  - npm i
-  - npm run build:test
+  - npm install -g pnpm
+  - pnpm install
+  - pnpm run build:test
   when:
     branch:
     - release/*
@@ -87,11 +87,11 @@ steps:
     - push
 
 - name: nodejs_master
-  image: node:20.14-alpine
+  image: node:24-alpine
   commands:
-  - node --version
-  - npm i
-  - npm run build:prod
+  - npm install -g pnpm
+  - pnpm install
+  - pnpm run build:prod
   when:
     branch:
     - master
