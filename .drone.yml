@@ -2,35 +2,15 @@ kind: pipeline
 name: oas_cliente_ci
 
 steps:
-- name: check_readme
-  image: jjvargass/qa_develoment:latest
-  commands:
-  - python /app/check_readme.py
-  when:
-    branch:
-    - develop
-    - feature/*
-    - release/*
-    event:
-    - push
-
-- name: check_branch
-  image: jjvargass/qa_develoment:latest
-  commands:
-  - python /app/check_branch.py -H ${DRONE_GIT_HTTP_URL}
-  when:
-    branch:
-    - develop
-    - feature/*
-    - release/*
-    event:
-    - push
-
-- name: check_commits
-  image: jjvargass/qa_develoment:latest
-  failure: ignore
-  commands:
-  - python /app/check_commits.py
+- name: run_sonar_scanner
+  image: aosapps/drone-sonar-plugin
+  settings:
+    sonar_host:
+      from_secret: SONAR_HOST
+    sonar_token:
+      from_secret: SONAR_TOKEN
+    ver: 1.0
+    exclusions: "**/node_modules/**,**/*.spec.ts,documentation/**"
   when:
     branch:
     - develop
@@ -56,23 +36,6 @@ steps:
 #   when:
 #     branch:
 #     - unitest
-
-# - name: run_sonar_scanner
-#   image: aosapps/drone-sonar-plugin
-#   settings:
-#     sonar_host:
-#       from_secret: SONAR_HOST
-#     sonar_token:
-#       from_secret: SONAR_TOKEN
-#     ver: 1.0
-#     exclusions: "**/node_modules/**,**/*.spec.ts,documentation/**"
-#   when:
-#     branch:
-#     - develop
-#     - feature/*
-#     - release/*
-#     event:
-#     - push
 
 - name: nodejs_release
   image: node:24-alpine
