@@ -20,24 +20,6 @@ steps:
     event:
     - push
 
-# - name: prueba_unitarias
-#   image: node:12.22.7
-#   commands:
-#   - npm i
-#   - npm run test
-#   when:
-#     branch:
-#     - unitest
-#
-# - name:  pruebas_linter
-#   image: node:12.22.7
-#   commands:
-#   - npm i
-#   - npm run lint
-#   when:
-#     branch:
-#     - unitest
-
 - name: nodejs_release
   image: node:24-alpine
   commands:
