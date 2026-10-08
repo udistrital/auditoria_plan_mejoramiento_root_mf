@@ -7,9 +7,11 @@ ellos y contiene el consumo de los assets, paleta de colores y favicon del siste
 ## Especificaciones Técnicas
 
 ### Tecnologías Implementadas y Versiones
-* [Angular](https://angular.io/) 18.2.13
 * [Node](https://nodejs.org/es/) 24.x
 * [pnpm](https://pnpm.io/es) 11.x
+* [single-spa](https://single-spa.js.org/) 6.x
+* [webpack](https://webpack.js.org/) 5.x
+* [TypeScript](https://www.typescriptlang.org/) 5.x
 
 
 ### Variables de Entorno
