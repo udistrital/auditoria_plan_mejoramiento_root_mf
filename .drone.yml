@@ -23,8 +23,9 @@ steps:
 - name: nodejs_release
   image: node:24-alpine
   commands:
-  - npm install -g pnpm
-  - pnpm install
+  - npm install -g pnpm@11.25.0
+  - pnpm install --frozen-lockfile
+  - pnpm run audit:security
   - pnpm run build:test
   when:
     branch:
@@ -35,8 +36,9 @@ steps:
 - name: nodejs_master
   image: node:24-alpine
   commands:
-  - npm install -g pnpm
-  - pnpm install
+  - npm install -g pnpm@11.25.0
+  - pnpm install --frozen-lockfile
+  - pnpm run audit:security
   - pnpm run build:prod
   when:
     branch:
