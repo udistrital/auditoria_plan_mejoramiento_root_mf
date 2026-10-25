@@ -89,3 +89,16 @@ auditoria_plan_mejoramiento_root_mf is free software: you can redistribute it an
 sisifo_root is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with novedades_crud. If not, see https://www.gnu.org/licenses/.
+
+## Seguridad de dependencias
+
+Utilizar pnpm 11.25.0 y conservar el archivo de bloqueo:
+
+```shell
+pnpm install --frozen-lockfile
+pnpm run audit:security
+```
+
+Drone ejecuta la auditoría antes de compilar para pruebas y producción.
+Consultar [la revisión de seguridad](docs/security-review.md) para las versiones
+corregidas, la validación y las limitaciones del análisis.
