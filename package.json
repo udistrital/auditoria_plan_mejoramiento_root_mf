@@ -11,7 +11,8 @@
     "build:webpack": "webpack --mode=production",
     "build:types": "tsc",
     "build:prod": "webpack --progress --mode production --no-devtool --env isProd",
-    "build:test": "webpack --progress --mode production --no-devtool --env isDev"
+    "build:test": "webpack --progress --mode production --no-devtool --env isDev",
+    "audit:security": "pnpm audit --audit-level=low"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -53,5 +54,6 @@
     "single-spa": "^6.0.2",
     "single-spa-layout": "^2.2.0"
   },
-  "types": "dist/udistrital-root-config.d.ts"
+  "types": "dist/udistrital-root-config.d.ts",
+  "packageManager": "pnpm@11.25.0"
 }
